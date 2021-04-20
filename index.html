@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World!</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+</head>
+
+<body>
+  <section class="hero is-medium is-link">
+    <div class="hero-body">
+      <p class="title">
+        Hello <span id="spnName">World</span>!
+      </p>
+      <p class="subtitle">
+        Welcome traveller, you reached my hello world page!
+      </p>
+    </div>
+  </section>
+
+  <div class="container">
+    <form class="box mt-4">
+      <div class="field">
+        <label class="label">Your name</label>
+        <div class="control">
+          <input id="inpName" class="input" type="text" placeholder="Type your name here!">
+        </div>
+      </div>
+
+      <button type="button" id="btnHello" class="button is-primary">Say hello to me!</button>
+    </form>
+  </div>
+
+  <script>
+    const inpName = document.getElementById('inpName');
+    const btnHello = document.getElementById('btnHello');
+    const spnName = document.getElementById('spnName');
+
+    btnHello.addEventListener('click', () => {
+      if (inpName.value && inpName.value !== "")
+        spnName.innerText = inpName.value;
+    })
+  </script>
+
+</body>
+
+</html>
