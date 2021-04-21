@@ -1,4 +1,2 @@
-FROM nginx:mainline-alpine
-RUN rm /etc/nginx/conf.d/*
-ADD my.conf /etc/nginx/conf.d/
+FROM nginxinc/nginx-unprivileged:mainline-alpine
 ADD index.html /usr/share/nginx/html/
